@@ -1,0 +1,28 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+#
+# This kind cluster includes:
+#  - Controlplane Node: 1
+#  - Worked Node: 1
+#
+# While these will not add more real compute capacity and
+# have limited isolation, this can be useful for testing
+# rolling updates etc.
+#
+# The API-server and other control plane components will be
+# on the control-plane node.
+#
+# You probably don't need this unless you are testing Kubernetes itself.
+nodes:
+- role: control-plane
+  # Ensure to use the proper Kubernetes release
+  image: kindest/node:v1.31.4@sha256:2cb39f7295fe7eafee0842b1052a599a4fb0f8bcf3f83d96c7f4864c357c6c30
+  # Add a mount from /path/to/my/files on the host to /files on the node
+  extraMounts:
+  - hostPath: /tmp/kind
+    containerPath: /tmp
+- role: worker
+  image: kindest/node:v1.31.4@sha256:2cb39f7295fe7eafee0842b1052a599a4fb0f8bcf3f83d96c7f4864c357c6c30
+  extraMounts:
+  - hostPath: /tmp/kind
+    containerPath: /tmp
