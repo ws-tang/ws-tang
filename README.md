@@ -9,6 +9,6 @@ Hello, thank you for your visit.
 
 I am a full stack software engineer with extensive experience in software development in Java, JakartaEE/J2EE, and other things.
 
-As technologies envolve in the software development world, keeping up to date becomes critical. I use GitHub as my playground to try new things for me.
+As technologies envolve in the software development world, keeping up to date becomes critical. I use GitHub as my playground to try new things.
 
 My current (private) project is on the JavaScript stack with REACT and Node.js.
