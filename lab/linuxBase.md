@@ -22,7 +22,7 @@ The information herein is aggregated from different sources with my edit. The cr
 ### Prerequisites
 
 1. Need a computer with proper tools to burn a DVD with Ubutun ISO image.
-2. The target computer for Ubuntu installation can be started with a DVD immage.
+2. The target computer for Ubuntu installation can be started with a DVD image.
 3. A DVD drive (external or internal) is available for the target computer.
 
 ### Procedure
