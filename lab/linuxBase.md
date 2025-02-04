@@ -2,7 +2,7 @@
 
 The base of my lab setup is a Linux server with Ubuntu Server that runs on a refurbished desktop. The details for the set up is below.
 
-The information herein is aggregated and edited. The credits goes to the corresponding documentation and people who kindly share their experience. More details is available at the related links throughtout.
+The information herein is aggregated from different sources with my edit. The credits goes to the corresponding documentation and people who kindly share their experience. More details is available at the related links below.
 
 ## Hardware
 
