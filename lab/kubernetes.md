@@ -36,7 +36,7 @@ kubectl config set-context --current --namespace=namespaceName
 kubectl get pods -n nameSpaceName
 
 # Access the pod shell (in the Docker container)
-kubectl exec -it podName -n namespaceName -- /bin/bash
+kubectl exec -it podName -c containerN -- /bin/sh
 ```
 
 ## Docker
