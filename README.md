@@ -27,6 +27,10 @@ My development environment is detailed at [dev](dev/devenv.md).
 
 # Lab Setup
 
+## Ubuntu Linux Server
+
+I use Ubuntu Server as the base image of my lab server. Setup details is available [here](lab/linuxBase.md).
+
 ## Kubernetes
 
 To set up a Kubernetes lab, one option is to use [kind](https://kind.sigs.k8s.io/). Details of my K8S lab setup with **kind** is available [here](lab/k8s/kuberneteslab.md).

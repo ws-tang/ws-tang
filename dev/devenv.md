@@ -2,6 +2,11 @@
 
 My development environment setup is noted as below.
 
+* Source Control Repository: **GitHub**
+* Git tool for Windows: **TortoiseGit**
+* IntelliJ: IDE for **Java**
+* Visual Studio Code: IDE for **Golang**, **React/Node.js**, and markdown (MD) files
+
 <br/>
 
 ## Source Control/Repository
