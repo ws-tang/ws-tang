@@ -34,7 +34,7 @@ The information herein is aggregated from different sources with my edit. The cr
 5. Use the DVD with the Ubuntu ISO image to start the target computer.
 6. Follow the on-screen steps to complete the installation.
 
-# References
+## References
 
 1. [**Ubuntu Server how-to guides**](https://documentation.ubuntu.com/server/how-to/) (Section: **Server installation**)
 2. [**How to Install Ubuntu Server 24.04 Step-by-Step**](https://www.linuxtechi.com/how-to-install-ubuntu-server/)

@@ -83,9 +83,9 @@ git pop => Pop the top stashed entry out
 
 <br/>
 
-## Typilcal Workflows
+## Typical Workflows
 
-### Work with Git for code update
+### Code update
 
 1. Switch to the local target branch.
 2. Pull the latest for the target branch locally from the remote repository.
@@ -135,10 +135,12 @@ git pop => Pop the top stashed entry out
 
 ### Simplify commits before delivery
 
+The procedure is to simplify a number of commits for code changes in a development work branch into one commit before delivering the update to the remote (main) repository. This will significantly reduce the clutter in Git commit history.
+
 1. Switch to the work branch
 2. Check the last N local commits, say N is **10**.
-3. Identify the rebase target commit. Tag it with a proper tag such **branchPrefix_target**.
-4. Identify the rebase recover commit. Tag it with a proper tag **branchPrefix_recover**.
+3. Identify the rebase target commit. The target commit is the one before the code change starts. Tag it with a proper tag such as **branchPrefix_target**.
+4. Identify the rebase recover commit. The recover commit is the latest commit of the code change. Tag it with a proper tag such as **branchPrefix_recover**.
 5. Run **git rebase** comamnd with the option **-i** to squash the commits between the target and recover tags.
 6. Mark the commit at the top line as **p** (pick) and everyone else as **s** (squash). Set the commit message properly during the squash steps. If the editor is vi/vim, use [ESC] then ":wq!" to save and exit.
 7. After the successful delivery of the squashed commits, make sure to remove the tags in the work branch.
