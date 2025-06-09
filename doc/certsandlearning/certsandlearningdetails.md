@@ -10,7 +10,7 @@ Certificate: [click to view](./AWS_SAA_C003_Cert.pdf)<br/>
 Credential Id: **138c6a25bb104183bbbc4f3463da0711**<br/>
 Validation URL: https://aws.amazon.com/verification <br/>
 
-[Preparation Notes](./prepnotesawssaa.mdprepnotesaws)<br/>
+[Preparation Notes](./prepnotesawssaa.md)<br/>
 
 ---
 

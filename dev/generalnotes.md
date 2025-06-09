@@ -11,6 +11,21 @@
 
 ## Programming Language - Java <a name="programming_java"></a>
 
+### General
+
+- [A quick summary for the differences between Java 8, 11, 17, and 21](https://medium.com/@a.r.m.monesan_9577/java-8-vs-java-11-vs-java-17-vs-java-21-a-comprehensive-comparison-aa4635f9c3fe)
+
+<br/>
+
+[**Redhat OpenJDK support for Java LTS versions**](https://access.redhat.com/articles/1299013)
+
+| OpenJDK Version | End of Full Support Date |
+| --------------- | ------------------------ |
+| 8               | November 30, 2026        |
+| 11              | October 31, 2024         |
+| 17              | October 31, 2027         |
+| 21              | December 31, 2029        |
+
 ### Stream
 
 [Streams in Java](https://www.geeksforgeeks.org/stream-in-java/)

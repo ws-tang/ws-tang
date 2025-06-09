@@ -80,6 +80,10 @@ Details about my professional certificates and learning is available at [doc/cer
 
 My development environment is detailed [here](dev/devenv.md).
 
+### Source Repository and Version Control
+
+- [Git](dev/git/gitnotes.md)
+
 ### Lab Setup <a name="dev_env_lab_setup"></a>
 
 #### Ubuntu Linux Server
@@ -104,9 +108,14 @@ My notes about system design and software development are [here](dev/sysdesignsw
 
 ## Programming <a name="programming"></a>
 
+- [General Notes](dev/generalnotes.md) (Java and others)
+- [Spring Boot](dev/spring/springbootNotes.md)
+- [RESTful Web Services](dev/rest/restREADME.md)
 - [Python](dev/python/pythonREADME.md)
 - [Golang/Go](dev/golang/golangREADME.md)
 - [Apache Kafka](dev/kafka/kafkaREADME.md)
+- [React](dev/react/reactREADME.md)
+- [Angular](dev/angular/angularREADME.md)
 
 <br/>
 
