@@ -110,6 +110,8 @@ My notes about system design and software development are [here](dev/sysdesignsw
 
 - [General Notes](dev/generalnotes.md) (Java and others)
 - [Spring Boot](dev/spring/springbootNotes.md)
+- [JavaScript](dev/frontend/jsNotes.md)
+- [HTML/CSS](dev/frontend/htmlcss.md)
 - [RESTful Web Services](dev/rest/restREADME.md)
 - [Python](dev/python/pythonREADME.md)
 - [Golang/Go](dev/golang/golangREADME.md)

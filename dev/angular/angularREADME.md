@@ -5,7 +5,7 @@ Here are my notes for Angular related topics.
 **Table of Contents**
 
 - [Angular](#angular)
-- [General Notes](#"angular_generalnotes")
+- [General Notes](#angular_generalnotes)
 
 <br/>
 

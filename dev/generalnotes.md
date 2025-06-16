@@ -5,6 +5,7 @@
 - [Programming Language - Java](#programming_java)
 - [Programming Language - C](#programming_c)
 - [Gradle](#gradle)
+- [Linux Platform](#linux_platform)
 - [Markdown](#markdown)
 
 <br/>
@@ -230,6 +231,16 @@ Note that other declarators may appear inside parentheses, specifying the types 
 
 - [Gradle](https://gradle.org/)
 - [Gradle User Guide](https://docs.gradle.org/current/userguide/userguide.html)
+
+<br/>
+
+## Linux Platform <a name="linux_platform"></a>
+
+- [Unix Commands Cheatsheet](https://cheatography.com/jluis/cheat-sheets/bash-and-unix-commands/)
+- [Bash Redirections](https://www.gnu.org/software/bash/manual/html_node/Redirections.html#Redirections)
+- [Bash Cheatsheet](https://devhints.io/bash)
+- [VIM Cheatsheet](https://devhints.io/vim)
+- [Grep Cheatsheet](https://devhints.io/grep)
 
 <br/>
 

@@ -48,8 +48,17 @@ Credential URL: https://certificates.confluent.io/7ba40e6c-3245-4841-86e3-704c79
 - [Docker for Beginners with Hands-on labs](https://www.coursera.org/account/accomplishments/certificate/H92TI72SJNMK)
 - [Programming with Google Go](https://www.coursera.org/account/accomplishments/specialization/certificate/0DITD3T6MI5J) (by Professor Ian Harris at Univ. of California Irvine)
 
+### Meta Front-End Developer Professional Certificate (React)
+
+- [Introduction to Front-End Development](./MetaCert_IntroToFrontEndDev.pdf)
+- [Programming with JavaScript](./MetaCert_ProgrammingWithJavaScript.pdf)
+- [Version Control](./MetaCert_VersionControl.pdf) (Git/GitHub)
+- [HTML and CSS in Depth](./MetaCert_HTML_CSS_InDepth.pdf)
+
 <br/>
 
 ## Other Sources
 
 - [Apache Kafka Fundamentals](https://training.confluent.io/channeldetail/apache-kafka-fundamentals-and-accreditation) by **Confluent**
+
+<br/>

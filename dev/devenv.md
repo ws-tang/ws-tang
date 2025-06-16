@@ -1,5 +1,16 @@
 # Development environment setup
 
+**Table of Contents**
+
+- [General](#general)
+- [General Notes](#src-control-repo)
+- [IntelliJ (Community Edition)](#ide_intellij)
+- [Open Source Licensing](#opensrc_licensing)
+
+<br/>
+
+## General <a name="general"></a>
+
 My development environment setup is noted as below.
 
 - Source Control Repository: **GitHub**
@@ -9,9 +20,9 @@ My development environment setup is noted as below.
 
 <br/>
 
-## [Source Control/Repository](#Source-Control-Repository)
+## Source Control/Repository <a name="src-control-repo"></a>
 
-I have chosen [GitHub](https://github.com) as my source version control system. A quick start reference is available at the [link](https://docs.github.com/en/get-started).
+I use [GitHub](https://github.com) as my source version control system. A quick start reference is available at the [link](https://docs.github.com/en/get-started).
 
 ### References
 
@@ -19,19 +30,19 @@ I have chosen [GitHub](https://github.com) as my source version control system. 
 
 <br/>
 
-## [TortoiseGit](#Tortoise-Git)
+### TortoiseGit
 
 [TortoiseGit](https://tortoisegit.org/about/) is a Windows Shell Interface to Git and based on TortoiseSVN. It's open source and can fully be build with freely available software.
 
 TortoiseGit is available [here](https://tortoisegit.org/download/).
 
-### References
+**References**
 
 1. [Easy quick setting up Tortoisegit credential](https://medium.com/@zoegroes/easy-quick-setting-up-tortoisegit-credential-bccc8baf802f).
 
 <br/>
 
-## IntelliJ (Community Edition)
+## IntelliJ (Community Edition) <a name="ide_intellij"></a>
 
 IntelliJ IDEA ([Community Edition](https://www.jetbrains.com/idea/download/?section=windows)) is a free IDE for **Java** and **Kotlin**.
 
@@ -45,12 +56,16 @@ IntelliJ IDEA ([Community Edition](https://www.jetbrains.com/idea/download/?sect
 
 Visual Studio Code (VS Code) is a Microsoft IDE suitable for a number of programming languages such as **JavaScript** (REACT/NodeJS), TypeScript, and others. One can also use VS Code to edit Markdown (md) files with preview.
 
-VS Code **IDE** is available [here](https://code.visualstudio.com/).
+VS Code [**IDE**](https://code.visualstudio.com/).
 
-VS Code **documentation** is [here](https://code.visualstudio.com/docs).
+VS Code [**documentation**](https://code.visualstudio.com/docs).
+
+VS Code [**shortcuts**](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) (Windows, PDF)
 
 <br/>
 
-## Licensing (Open Source)
+## Open Source Licensing <a name="opensrc_licensing"></a>
 
 Explanations about Open Source licensing can be found [here](https://itsfoss.com/open-source-licenses-explained/).
+
+<br/>
