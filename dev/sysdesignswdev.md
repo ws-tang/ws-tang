@@ -9,6 +9,7 @@
   - [Models Used for System Design Life Cycle](#sysdesign_models")
 - [Software Development Life Cycle (SDLC)](#swdev)
 - [Workflow, Continuous Integration, Continuous Delivery, and Continuous Deployment](#cicds)
+- [Microservices with Spring Boot](#microservices)
 
 <br/>
 
@@ -142,5 +143,120 @@ The strategy involves deploying to a staging environment first, where additional
 **Automation is the key difference that sets Continuous Deployment apart from Continuous Delivery.** These two deployment types can be used together in a pipeline or adopted independently, depending on the organization’s processes and requirements. When used together, the Continuous Delivery steps ensure the code is production-ready after passing all tests and reviews. The Continuous Deployment then automates the final step of deploying production-ready code without manual intervention. Using them together in a production environment provides an additional safety layer but also increases the time required.
 
 ([Source](https://www.coursera.org/learn/introduction-to-version-control/supplement/iCaLo/version-control-in-professional-software-development))
+
+<br/>
+
+## Microservices with Spring Boot <a name="microservices"></a>
+
+**Microservices**, also called Microservices Architecture, is a software development approach that involves building large applications as a collection of small functional modules. This architectural approach is widely adopted due to its ease of maintenance and faster development process.
+
+**Microservices with the Spring Boot** framework break down complex applications into _smaller services, loosely coupled services_, each focusing on a specific business capability. This architecture promotes _agility_, _scalability_, and _resilience_, leveraging technologies like Docker, Kubernetes, and _RESTful APIs_ for seamless communication and deployment in distributed environments.
+
+<br/>
+
+Comparisons among Monolithic, Serice-Oriented Architecture(SOA), and Microservices.
+
+| Features                   | Monolithic                                                                            | SOA                                                                                                      | Microservices                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Structure                  | A single application where all software components are assembled and tightly coupled. | Collection of services and loosely coupled.                                                              | Collection of small services and services independently deployable.                 |
+| Communication              | Within the same application, components communicate with each other.                  | Using some standardized protocols, services communicate with each other.                                 | Through some lightweight protocols, all the services communicate with each other.   |
+| Scalability                | Scaling is required according to the needs of the entire application.                 | All services can be scaled independently.                                                                | All the services can be scaled independently according to the business requirement. |
+| Development and Deployment | It maintains centralized development and components deployed as a single unit.        | It also maintains centralized development and here the services are deployed as monolithic applications. | It maintains decentralized development and services deployed independently.         |
+
+<br/>
+
+Comparisons between Serice-Oriented Architecture(SOA) and Microservices.
+
+| Feature     | SOA                                                                                                      | Microservices                                                                                                              |
+| ----------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Scope       | Enterprise-wide, integrating multiple applications                                                       | Application-specific, breaking down a single application into smaller, independent services                                |
+| Granularity | Larger, more coarse-grained services, often with a single data storage layer shared by multiple services | Fine-grained, specialized services, each handling a specific business capability                                           |
+| Management  | Centralized governance and management, often with an Enterprise Service Bus (ESB)                        | Decentralized governance, with each service team managing its own development and deployment                               |
+| Focus       | Reusability and interoperability of services across the enterprise                                       | Independent deployability, scalability, and fault isolation                                                                |
+| Example     | Integrating different business systems (like CRM, ERP, etc.) using a common set of services              | Building a complex e-commerce application with separate services for user management, product catalog, shopping cart, etc. |
+
+#### SAGA Design Pattern
+
+The [SAGA Design Pattern](https://www.geeksforgeeks.org/system-design/saga-design-pattern/) is a pattern used to manage long-running and distributed transactions, particularly in microservices architecture. Unlike traditional monolithic transactions, which require a single, centralized transaction management system, the SAGA pattern breaks down a complex transaction into a series of smaller, isolated operations, each handled by a different service.
+
+<span style="text-decoration:underline">Key Concepts</span>
+
+- **Local Transactions**: Each step in the saga is a local transaction within a single service, typically using ACID properties for that service's data store.
+- **Compensating Transactions**: For each local transaction, there's a corresponding compensating transaction. If a step fails, the saga executes these compensating transactions in reverse order to undo the changes made by successful steps.
+- **Eventual Consistency**: The Saga pattern aims for eventual consistency, meaning that while data might be temporarily inconsistent during a failure, it will eventually become consistent as compensating transactions are executed.
+
+Two Approaches:
+
+- **Choreography**: Services independently react to events published by other services, triggering their local transactions and compensating transactions.
+- **Orchestration**: A central orchestrator service manages the saga, telling each service what steps to execute and when to execute compensating transactions.
+
+When to use the Saga Pattern:
+
+- When you need to manage long-running transactions that span multiple services.
+- When you need to ensure data consistency across those services, even when failures occur.
+- When you can tolerate eventual consistency rather than immediate consistency.
+
+<span style="text-decoration:underline">Benefits</span>
+
+- Improved Resilience: The saga pattern allows for graceful failure handling by using compensating transactions, making systems more resilient to failures.
+- Loose Coupling: Orchestration-based sagas can achieve loose coupling between services, as the orchestrator manages the overall workflow, reducing dependencies.
+- Increased Scalability: The asynchronous nature of sagas allows for better scalability compared to synchronous, two-phase commit approaches.
+
+<span style="text-decoration:underline">Challenges</span>
+
+- Complexity: Sagas can be complex to implement, especially with many services and complex business logic.
+- Debugging: Tracing and debugging sagas can be challenging, particularly in choreography-based approaches.
+- Eventual Consistency: While a strength, eventual consistency might not be suitable for all scenarios, requiring careful consideration.
+- Single Point of Failure (Orchestration): The orchestrator in an orchestration-based saga can become a single point of failure.
+
+#### Design patterns of Java Spring Boot Microservices
+
+- **Service Registry and Discovery**: Services automatically register in a central registry, allowing others to identify and interact with them dynamically.
+- **API Gateway**: It acts as a customer entry point and forwards requests to appropriate microservices to provide additional functionality such as authentication and rate limits.
+- **Circuit Breaker**: It monitors the availability of services and protects from failures by sending requests or by providing responses if service is unavailable.
+- **CQRS** (Command Query Responsibility Segregation): It separates the read and write operations. Also, it optimizes each and every operation separately for efficiency.
+- **Saga Pattern**: It manages distributed tasks by organizing a sequence of local transactions.
+- **Database per service**: Each of the services has separate databases. This ensures data isolation and also enables scaling and individual development.
+- **Asynchronous messaging**: Each services communicate with each other through message queues like Kafka or RabbitMQ.
+
+#### Spring Cloud for Microservices Development
+
+- Spring Cloud Config Server: centralizes configuration management for microservices.
+- Service registration and discovery using Netflix Eureka: enables dynamic service discovery and registration.
+- Spring Cloud LoadBalancer: distributes traffic evenly among microservice instances.
+- resilience4j-ratelimiter: implements rate limiting to maintain stability under heavy load.
+- Circuit Breakers Pattern: with tools like Hystrix provides fault isolation and fallback mechanisms.
+
+#### Circuit Breaker Pattern in Java Microservices
+
+Circuit Breaker pattern in microservices follows fault-tolerance mechanism. It monitors and controls the interaction between different services. It dynamically manages service availability by temporarily canceling requests for failed services, prevents system overloading, and ensures graceful degradation in distributed environments. Circuit Breaker pattern typically operates in three basic states: _Closed_, _Open_, and _Half-Open_.
+
+Some characteristics of Circuit Breaker pattern are: _Fault Tolerance_, _Resilience_, _Monitoring_, _Failure Isolation_, _Fallback Mechanism_, and _Automatic Recovery_.
+
+#### Strangler Pattern in Micro-services
+
+The [Strangler pattern](https://www.geeksforgeeks.org/system-design/strangler-pattern-in-micro-services-system-design/) is an architectural approach employed during the migration from a monolithic application to a microservices-based architecture.
+
+#### Service Mesh
+
+A [service mesh](https://www.geeksforgeeks.org/system-design/service-mesh-in-microservices/) provides a dedicated infrastructure layer for handling service-to-service communication, offering features like load balancing, security, and observability. This is again one of the most asked microservices architecture interview questions.
+
+#### Eventual consistency in microservices
+
+Eventual consistency is the idea that, given enough time, all updates made to a distributed system will propagate and converge to a consistent state, even though intermediate states might be inconsistent.
+
+#### Reverse Proxy
+
+A _reverse proxy_ plays a crucial role in a microservices architecture by acting as an intermediary between client requests and the individual microservices that make up the application. Its primary function is to handle incoming requests and route them to the appropriate microservice, based on factors such as URL paths, headers, or other criteria.
+
+## CAP theorem
+
+The [CAP theorem](https://www.geeksforgeeks.org/system-design/cap-theorem-in-system-design/) states that a distributed system cannot simultaneously provide Consistency, Availability, and Partition tolerance. In microservices, architects need to make trade-offs based on these factors.
+
+### Additional Resources
+
+- [Java Microservices Interview Questions and Answers](https://www.geeksforgeeks.org/advance-java/microservices-interview-questions/)
+- [Top 50 Microservices Interview Questions](https://www.geeksforgeeks.org/system-design/top-microservices-interview-questions/)
+- [Deploy a Microservices Architecture with AWS](https://www.geeksforgeeks.org/deploy-a-microservices-architecture-with-aws/)
 
 <br/>

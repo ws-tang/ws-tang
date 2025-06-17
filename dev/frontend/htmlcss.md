@@ -3,7 +3,7 @@
 **Table of Contents**
 
 - [HTML](#fe_html)
-- [CSSs](#fe_css)
+- [CSS](#fe_css)
 
 <br/>
 

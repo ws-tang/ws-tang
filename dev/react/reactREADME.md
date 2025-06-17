@@ -13,6 +13,16 @@ Here are my notes for React.js related topics.
 
 ## Development Setup <a name="dev_setup"></a>
 
+**Visual Studio Code** (VS Code) is a free IDE from Microsoft. One can [download](https://code.visualstudio.com/download) it per the target platform and install it on the computer where the development takes place.
+
+After installation of VS Code, ensure the extension **Prettier** is installed. If not, look up for the extension **Prettier** via VS Code Extensions and install it.
+
+In addition to VS Code and its extension, also [download Node.js](https://nodejs.org/en/download) per the target platform and install it on the same computer.
+
+Refer to the good [reference](https://handsonreact.com/docs/visual-studio-code-setup) about VS Code setup for React.
+
+VS Code [keyboard shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) (Windows).
+
 <br/>
 
 ## React.js <a name="reactjs"></a>
@@ -27,6 +37,60 @@ This is called the _reconciliation_ process and can be broken down into the foll
 1. The virtual DOM is compared to the previous version of the virtual DOM and checks which elements have changed.
 1. The changed elements are updated in the browser DOM.
 1. The displayed webpage updates to match the browser DOM.
+
+### General
+
+<span style="text-decoration:underline">React Props</span>
+
+- Pass data between components
+- Arguments are passed like HTML attributes using JSX
+- Use the keyword `props` inside functions
+- Send multiple data types
+- Flexible dynamic content
+
+The component that sends the props is the **parent** component; The component that receives the props is the **child** component. This is one-directional communication from the parent to the child.
+
+In React, it must never modify its own prompts when you declare a component using props.
+
+#### Components
+
+A **Component** is one of the core building blocks of React. In other words, we can say that every application you will develop in React will be made up of pieces called components. Components make the task of building UIs much easier. In React, we mainly have two types of components:
+
+- Functional Components: Functional components are simply JavaScript functions. Initially, they were limited in terms of features like state and lifecycle methods. However, with the introduction of Hooks, functional components can now use state, manage side effects, and access other features that were once exclusive to class components.
+- Class Components: Class components are more complex than functional components. They are able to manage state, handle lifecycle methods, and can also interact with other components. Class components can pass data between each other via props, similar to functional components.
+
+| Functional Components                                                                             | Class Components                                                                              |
+| ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| A functional component is just a plain JavaScript pure function that accepts props as an argument | A class component requires you to extend from React. Component and create a render function   |
+| No render method used                                                                             | It must have the render() method returning JSX                                                |
+| Also known as Stateless components                                                                | Also known as Stateful components                                                             |
+| React lifecycle methods (for example, componentDidMount) cannot be used in functional components. | React lifecycle methods can be used inside class components (for example, componentDidMount). |
+| Constructors are not used.                                                                        | Constructor is used as it needs to store state.                                               |
+| Uses hooks like useState for managing state.                                                      | Uses this.state and this.setState for state management.                                       |
+
+A React Component can go through four stages of its life as follows.
+
+- Initialization: This is the stage where the component is constructed with the given Props and default state. This is done in the constructor of a Component Class.
+- Mounting: Mounting is the stage of rendering the JSX returned by the render method itself.
+- Updating: Updating is the stage when the state of a component is updated and the application is repainted.
+- Unmounting: As the name suggests Unmounting is the final step of the component lifecycle where the component is removed from the page.
+
+#### Key
+
+A key is a special string attribute you need to include when creating lists of elements in React. Keys are used in React to identify which items in the list are changed, updated, or deleted. In other words, we can say that keys are used to give an identity to the elements in the lists.
+
+#### Hooks
+
+Hooks let developers use state and other React features without writing a class. Hooks provide a direct API to react concepts such as props, state, context, refs and life-cycle.
+
+The most used hook in React is the `useState()` hook. Using this hook we can declare a state variable inside a function but only one state variable can be declared using a single `useState()` hook. Whenever the `useState()` hook is used, the value of the state variable is changed and the new variable is stored in a new cell in the stack.
+
+Syntax:
+`const [state, setState] = useState(initialState);`
+
+- state: The current state value.
+- setState: A function used to update the state value.
+- initialState: The initial value of the state.
 
 <br/>
 

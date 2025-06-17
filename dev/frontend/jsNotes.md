@@ -12,7 +12,7 @@
 
 **Visual Studio Code** (VS Code) is a free IDE from Microsoft. One can [download](https://code.visualstudio.com/download) it per the target platform and install it on the computer where the development takes place.
 
-After installation of VS Code, ensure the extension \*_Code Runner_ is installed. If not, look up for the extension Code Runner and install it.
+After installation of VS Code, ensure the extension **Code Runner** is installed. If not, look up for the extension **Code Runner** via VS Code Extensions and install it.
 
 In addition to VS Code and its extension, also [download Node.js](https://nodejs.org/en/download) per the target platform and install it on the same computer.
 
